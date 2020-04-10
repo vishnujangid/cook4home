@@ -1,4 +1,4 @@
-package com.cook4home.model;
+package com.cook4home.request;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -10,19 +10,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
-@Entity
 @Setter
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Table(name = "cook")
-public class Cook extends BaseEntity{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class RegisterRequest {
+    
     Long id;
     String name;
-    Integer age;
-    Integer experience;
-    String area;
-    Integer rating;
+    String email;
+    String mobile;
+    String password;
 }

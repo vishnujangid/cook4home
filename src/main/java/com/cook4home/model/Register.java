@@ -17,7 +17,7 @@ import java.util.Date;
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Table(name = "cook_register")
-public class Register {
+public class Register extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
@@ -25,6 +25,5 @@ public class Register {
     String email;
     String mobile;
     String password;
-    Date createdAt;
-    Date updatedAt;
+    
 }

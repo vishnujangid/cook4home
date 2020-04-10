@@ -2,6 +2,7 @@ package com.cook4home.controller;
 
 import com.cook4home.model.Register;
 import com.cook4home.pojo.Login;
+import com.cook4home.request.RegisterRequest;
 import com.cook4home.service.RegisterService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -20,7 +21,7 @@ public class RegisterController {
     final RegisterService registerService;
 
     @PostMapping(value = "/register")
-    public Boolean registerCook(@RequestBody @Valid Register register) {
+    public Boolean registerCook(@RequestBody @Valid RegisterRequest register) {
         registerService.registerCook(register);
         return true;
     }
